@@ -366,32 +366,6 @@ function App() {
           )}
         </div>
       </div>
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogTrigger asChild>
-          <button onClick={() => setIsDialogOpen(true)}>
-            <Plus /> Agregar Evento
-          </button>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Nuevo Evento</DialogTitle>
-          </DialogHeader>
-          <div>
-            <input
-              type="text"
-              placeholder="Título"
-              value={newEvent.title}
-              onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-            />
-            <textarea
-              placeholder="Descripción"
-              value={newEvent.description}
-              onChange={(e) => setNewEvent({ ...newEvent, description: e.target.value })}
-            />
-            <button onClick={handleAddEvent}>Agregar Evento</button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
